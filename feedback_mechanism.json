@@ -1,0 +1,394 @@
+{
+  "feedbackTemplates": [
+    {
+      "rating": "excellent",
+      "generalTemplate": "Excellent response! Your answer demonstrates exceptional alignment with JP Morgan's values and expectations. You've shown {competency_strength} that would be highly valued in the Global Markets division.",
+      "strengthsTemplate": "Key strengths include:\n- {strength_1}\n- {strength_2}\n- {strength_3}",
+      "comparisonTemplate": "Your response matches the qualities of our 'Excellent' example by demonstrating {excellent_quality_1} and {excellent_quality_2}.",
+      "nextStepsTemplate": "To maintain this level of excellence:\n- Continue emphasizing quantifiable impacts in your examples\n- Keep connecting your experiences to JP Morgan's specific business areas\n- Practice delivering these strong responses under time pressure"
+    },
+    {
+      "rating": "good",
+      "generalTemplate": "Good response! Your answer shows strong alignment with JP Morgan's expectations. You've demonstrated solid {competency_strength} that would be valued at JP Morgan.",
+      "strengthsTemplate": "Key strengths include:\n- {strength_1}\n- {strength_2}",
+      "improvementTemplate": "To reach an 'Excellent' rating, consider:\n- {improvement_1}\n- {improvement_2}\n- {improvement_3}",
+      "comparisonTemplate": "Your response has many qualities of our 'Good' example, particularly in {good_quality_1}. To reach 'Excellent', add more {excellent_quality_1}.",
+      "nextStepsTemplate": "Next steps for improvement:\n- Add more specific metrics and quantifiable results\n- Strengthen the connection to JP Morgan's culture and values\n- Enhance the structure of your response with clearer examples"
+    },
+    {
+      "rating": "average",
+      "generalTemplate": "Satisfactory response. Your answer meets basic expectations but could be strengthened to better align with JP Morgan's standards. You've shown adequate {competency_strength}.",
+      "strengthsTemplate": "Positive aspects include:\n- {strength_1}",
+      "improvementTemplate": "To improve your rating, focus on:\n- {improvement_1}\n- {improvement_2}\n- {improvement_3}\n- {improvement_4}",
+      "comparisonTemplate": "Your response is similar to our 'Average' example. To reach 'Good' or 'Excellent', you'll need to add {good_quality_1} and {excellent_quality_1}.",
+      "nextStepsTemplate": "Recommended improvements:\n- Add specific, quantifiable examples with clear outcomes\n- Demonstrate deeper understanding of JP Morgan's values\n- Structure your response more clearly with situation, action, and result\n- Include more technical or financial details relevant to the Global Markets role"
+    },
+    {
+      "rating": "poor",
+      "generalTemplate": "Your response needs significant improvement to meet JP Morgan's expectations. There are several areas where strengthening your answer would better demonstrate your {competency_area} capabilities.",
+      "strengthsTemplate": "Positive starting points:\n- {strength_1}",
+      "improvementTemplate": "Critical areas for improvement:\n- {improvement_1}\n- {improvement_2}\n- {improvement_3}\n- {improvement_4}\n- {improvement_5}",
+      "comparisonTemplate": "Your response shows similarities to our 'Poor' example. To improve, you'll need to address {poor_quality_1} and develop {good_quality_1}.",
+      "nextStepsTemplate": "Essential next steps:\n- Review the sample 'Good' and 'Excellent' responses for this question\n- Practice structuring your answers using the STAR method (Situation, Task, Action, Result)\n- Focus on adding specific examples with measurable outcomes\n- Connect your experiences directly to the skills needed at JP Morgan\n- Review the JP Morgan culture and values section"
+    },
+    {
+      "rating": "veryPoor",
+      "generalTemplate": "Your response requires substantial revision to meet JP Morgan's standards. The answer shows significant misalignment with what JP Morgan would expect in terms of {competency_area}.",
+      "improvementTemplate": "Critical issues to address immediately:\n- {improvement_1}\n- {improvement_2}\n- {improvement_3}\n- {improvement_4}\n- {improvement_5}",
+      "comparisonTemplate": "Your response contains elements similar to our 'Very Poor' example, particularly {very_poor_quality_1}. This approach would be problematic in a JP Morgan interview.",
+      "nextStepsTemplate": "Recommended action plan:\n- Carefully study the 'Excellent' and 'Good' sample responses\n- Review the JP Morgan culture and values section thoroughly\n- Practice completely restructuring your answer using the STAR method\n- Focus on demonstrating professional attitudes aligned with financial services\n- Consider seeking additional resources on interview preparation for finance roles"
+    }
+  ],
+  "competencyFeedback": {
+    "Teamwork": {
+      "excellent": {
+        "competency_strength": "exceptional collaborative leadership and conflict resolution skills",
+        "strength_1": "Structured approach to evaluating different perspectives",
+        "strength_2": "Balance of assertiveness with receptivity to others' ideas",
+        "strength_3": "Measurable positive outcome from collaborative effort",
+        "excellent_quality_1": "transforming disagreement into analytical advantage",
+        "excellent_quality_2": "achieving measurable team success"
+      },
+      "good": {
+        "competency_strength": "effective teamwork and collaboration skills",
+        "strength_1": "Willingness to consider others' perspectives",
+        "strength_2": "Finding constructive compromise",
+        "improvement_1": "Add a more structured framework for evaluating different ideas",
+        "improvement_2": "Quantify the team outcome more precisely",
+        "improvement_3": "Show more leadership in facilitating resolution",
+        "good_quality_1": "finding constructive compromise",
+        "excellent_quality_1": "a structured evaluation framework and more quantifiable results"
+      },
+      "average": {
+        "competency_strength": "basic teamwork capabilities",
+        "strength_1": "Flexibility and willingness to compromise",
+        "improvement_1": "Add specific details about the resolution process",
+        "improvement_2": "Quantify the outcome of the team effort",
+        "improvement_3": "Show more initiative in resolving the disagreement",
+        "improvement_4": "Demonstrate stronger connection to JP Morgan's collaborative culture",
+        "good_quality_1": "more specific details and clearer resolution process",
+        "excellent_quality_1": "a structured approach to evaluating ideas and quantifiable results"
+      },
+      "poor": {
+        "competency_area": "teamwork",
+        "strength_1": "Recognition of the need to work with the team decision",
+        "improvement_1": "Focus on resolution rather than frustration",
+        "improvement_2": "Show genuine effort to understand teammates' perspectives",
+        "improvement_3": "Demonstrate collaborative problem-solving rather than reluctant compliance",
+        "improvement_4": "Avoid continuing to believe your idea was superior despite the team's decision",
+        "improvement_5": "Add reflection on personal growth from the team experience",
+        "poor_quality_1": "the focus on frustration rather than resolution",
+        "good_quality_1": "active listening and constructive compromise"
+      },
+      "veryPoor": {
+        "competency_area": "teamwork",
+        "improvement_1": "Eliminate dismissive attitudes toward teammates",
+        "improvement_2": "Remove statements suggesting your ideas are inherently superior",
+        "improvement_3": "Show commitment to team outcomes regardless of whose idea is chosen",
+        "improvement_4": "Demonstrate respect for diverse perspectives",
+        "improvement_5": "Focus on collaborative success rather than individual recognition",
+        "very_poor_quality_1": "dismissiveness toward teammates and minimal commitment to team outcomes"
+      }
+    },
+    "Analytical Skills": {
+      "excellent": {
+        "competency_strength": "sophisticated analytical problem-solving and quantitative measurement skills",
+        "strength_1": "Structured methodology with clear problem identification",
+        "strength_2": "Quantifiable impact across multiple dimensions",
+        "strength_3": "Iterative solution development with stakeholder feedback",
+        "excellent_quality_1": "comprehensive problem quantification",
+        "excellent_quality_2": "measuring success across multiple dimensions"
+      },
+      "good": {
+        "competency_strength": "strong analytical capabilities and structured problem-solving",
+        "strength_1": "Clear problem identification with specific impact",
+        "strength_2": "Structured solution with measurable outcomes",
+        "improvement_1": "Add more precise quantification of the initial problem",
+        "improvement_2": "Include more dimensions in your success measurement",
+        "improvement_3": "Demonstrate more iterative refinement of your solution",
+        "good_quality_1": "structured solution development",
+        "excellent_quality_1": "more comprehensive metrics and multi-dimensional impact measurement"
+      },
+      "average": {
+        "competency_strength": "basic analytical organization skills",
+        "strength_1": "Identification of an organizational problem",
+        "improvement_1": "Add specific quantification of the problem and impact",
+        "improvement_2": "Develop a more structured methodology for your solution",
+        "improvement_3": "Include more specific metrics for measuring success",
+        "improvement_4": "Show more sophisticated analytical techniques",
+        "good_quality_1": "more structured methodology and specific metrics",
+        "excellent_quality_1": "comprehensive problem quantification and multi-dimensional measurement"
+      },
+      "poor": {
+        "competency_area": "analytical skills",
+        "strength_1": "Basic identification of an organizational need",
+        "improvement_1": "Develop a structured approach rather than ad-hoc solution",
+        "improvement_2": "Add specific metrics and quantification",
+        "improvement_3": "Show effective stakeholder management",
+        "improvement_4": "Demonstrate attention to quality and detail",
+        "improvement_5": "Include specific outcomes rather than vague success measures",
+        "poor_quality_1": "the lack of structured methodology and specific metrics",
+        "good_quality_1": "a clear problem-solving approach with measurable outcomes"
+      },
+      "veryPoor": {
+        "competency_area": "analytical skills",
+        "improvement_1": "Remove statements suggesting others weren't contributing adequately",
+        "improvement_2": "Develop a structured analytical methodology",
+        "improvement_3": "Add specific metrics for measuring success",
+        "improvement_4": "Show collaborative approach rather than individual heroics",
+        "improvement_5": "Demonstrate higher standards than merely passing",
+        "very_poor_quality_1": "arrogance and lack of structured methodology"
+      }
+    },
+    "Drive for Results": {
+      "excellent": {
+        "competency_strength": "exceptional strategic prioritization and results measurement",
+        "strength_1": "Sophisticated prioritization framework with multiple dimensions",
+        "strength_2": "Data-driven approach to personal productivity",
+        "strength_3": "Quantifiable outcomes exceeding standard expectations",
+        "excellent_quality_1": "strategic impact assessment",
+        "excellent_quality_2": "measurable outperformance"
+      },
+      "good": {
+        "competency_strength": "effective prioritization and results achievement",
+        "strength_1": "Structured prioritization methodology",
+        "strength_2": "Clear time management with specific techniques",
+        "improvement_1": "Add a more sophisticated framework with additional dimensions",
+        "improvement_2": "Include more data-driven elements in your approach",
+        "improvement_3": "Quantify your outperformance compared to peers or standards",
+        "good_quality_1": "structured prioritization and time management",
+        "excellent_quality_1": "a multi-dimensional framework and quantified outperformance"
+      },
+      "average": {
+        "competency_strength": "basic prioritization skills",
+        "strength_1": "Basic organization and planning approach",
+        "improvement_1": "Develop a more structured prioritization methodology",
+        "improvement_2": "Add specific techniques beyond basic lists",
+        "improvement_3": "Include more specific outcomes and metrics",
+        "improvement_4": "Show more strategic thinking in your approach",
+        "good_quality_1": "a more structured methodology with specific techniques",
+        "excellent_quality_1": "strategic framework and quantifiable results"
+      },
+      "poor": {
+        "competency_area": "drive for results",
+        "strength_1": "Basic awareness of deadlines and task completion",
+        "improvement_1": "Develop a proactive rather than reactive approach",
+        "improvement_2": "Create a systematic methodology beyond deadline management",
+        "improvement_3": "Eliminate last-minute work habits",
+        "improvement_4": "Focus on excellence rather than minimal compliance",
+        "improvement_5": "Add specific metrics and outcomes",
+        "poor_quality_1": "the reactive approach and last-minute habits",
+        "good_quality_1": "structured methodology and effective time management"
+      },
+      "veryPoor": {
+        "competency_area": "drive for results",
+        "improvement_1": "Develop a systematic prioritization approach",
+        "improvement_2": "Eliminate mood-based task selection",
+        "improvement_3": "Address poor planning that leads to avoidable crises",
+        "improvement_4": "Stop rationalizing disorganization as flexibility",
+        "improvement_5": "Focus on excellence rather than minimal passing standards",
+        "very_poor_quality_1": "complete lack of systematic prioritization and mood-based task selection"
+      }
+    },
+    "Presentation Skills": {
+      "excellent": {
+        "competency_strength": "exceptional communication strategy and audience engagement",
+        "strength_1": "Sophisticated audience analysis and content tailoring",
+        "strength_2": "Strategic message structuring with pyramid approach",
+        "strength_3": "Multi-dimensional success measurement with specific metrics",
+        "excellent_quality_1": "structured methodology for audience engagement",
+        "excellent_quality_2": "comprehensive success measurement"
+      },
+      "good": {
+        "competency_strength": "effective communication and presentation planning",
+        "strength_1": "Thoughtful audience analysis and content adaptation",
+        "strength_2": "Clear structure with effective visual elements",
+        "improvement_1": "Add a more sophisticated structural framework (like the pyramid approach)",
+        "improvement_2": "Include more specific metrics for measuring presentation success",
+        "improvement_3": "Demonstrate more iterative refinement through practice",
+        "good_quality_1": "audience analysis and visual communication",
+        "excellent_quality_1": "a more sophisticated structural framework and specific success metrics"
+      },
+      "average": {
+        "competency_strength": "basic presentation preparation",
+        "strength_1": "Adequate preparation time and content research",
+        "improvement_1": "Develop more thoughtful audience analysis",
+        "improvement_2": "Create a more strategic structure beyond basic organization",
+        "improvement_3": "Add more specific success metrics beyond grades",
+        "improvement_4": "Show more confidence and delivery techniques",
+        "good_quality_1": "more thoughtful audience analysis and structure",
+        "excellent_quality_1": "strategic message structuring and comprehensive success measurement"
+      },
+      "poor": {
+        "competency_area": "presentation skills",
+        "strength_1": "Basic attempt at visual elements",
+        "improvement_1": "Increase preparation time significantly",
+        "improvement_2": "Develop a clear structure rather than reading slides",
+        "improvement_3": "Practice delivery to build confidence",
+        "improvement_4": "Create more professional and detailed content",
+        "improvement_5": "Measure success beyond minimal passing",
+        "poor_quality_1": "minimal preparation and lack of structure",
+        "good_quality_1": "thoughtful preparation and clear structure"
+      },
+      "veryPoor": {
+        "competency_area": "presentation skills",
+        "improvement_1": "Change your attitude toward the importance of presentation skills",
+        "improvement_2": "Allocate appropriate preparation time",
+        "improvement_3": "Develop and practice structured delivery",
+        "improvement_4": "Create professional content with depth",
+        "improvement_5": "Recognize the critical importance of communication in finance",
+        "very_poor_quality_1": "dismissive attitude toward presentation importance and minimal preparation"
+      }
+    },
+    "Markets Knowledge": {
+      "excellent": {
+        "competency_strength": "comprehensive financial markets understanding and technical precision",
+        "strength_1": "Sophisticated understanding across multiple asset classes",
+        "strength_2": "Precise technical details with specific mechanisms",
+        "strength_3": "Integration of theoretical frameworks with practical market examples",
+        "excellent_quality_1": "nuanced understanding of market interconnections",
+        "excellent_quality_2": "application to JP Morgan's business context"
+      },
+      "good": {
+        "competency_strength": "strong technical knowledge and market understanding",
+        "strength_1": "Accurate explanations across multiple asset classes",
+        "strength_2": "Appropriate financial terminology and concepts",
+        "improvement_1": "Add more precise technical details and mechanisms",
+        "improvement_2": "Include more specific market examples",
+        "improvement_3": "Strengthen connections between different markets",
+        "good_quality_1": "accurate multi-asset class understanding",
+        "excellent_quality_1": "more sophisticated interconnections and specific technical details"
+      },
+      "average": {
+        "competency_strength": "basic market knowledge",
+        "strength_1": "General understanding of major asset classes",
+        "improvement_1": "Add more technical terminology and precision",
+        "improvement_2": "Include specific mechanisms rather than general effects",
+        "improvement_3": "Add market examples and context",
+        "improvement_4": "Demonstrate more sophisticated understanding of interconnections",
+        "good_quality_1": "more technical precision and specific examples",
+        "excellent_quality_1": "sophisticated understanding of mechanisms and market interconnections"
+      },
+      "poor": {
+        "competency_area": "markets knowledge",
+        "strength_1": "Basic awareness of some market relationships",
+        "improvement_1": "Eliminate uncertainty in your explanations",
+        "improvement_2": "Add specific mechanisms rather than general effects",
+        "improvement_3": "Include precise financial terminology",
+        "improvement_4": "Add quantification and specific examples",
+        "improvement_5": "Demonstrate understanding of sector differences",
+        "poor_quality_1": "uncertainty and vague generalizations",
+        "good_quality_1": "precise terminology and specific mechanisms"
+      },
+      "veryPoor": {
+        "competency_area": "markets knowledge",
+        "improvement_1": "Address fundamental knowledge gaps in market mechanics",
+        "improvement_2": "Eliminate oversimplifications of complex relationships",
+        "improvement_3": "Add specific terminology and mechanisms",
+        "improvement_4": "Include accurate explanations of asset class relationships",
+        "improvement_5": "Remove inaccurate statements about market behavior",
+        "very_poor_quality_1": "oversimplification and fundamental knowledge gaps"
+      }
+    }
+  },
+  "keywordAnalysis": {
+    "positive": [
+      {"term": "quantified", "weight": 3},
+      {"term": "measured", "weight": 3},
+      {"term": "analyzed", "weight": 2},
+      {"term": "structured", "weight": 3},
+      {"term": "framework", "weight": 3},
+      {"term": "methodology", "weight": 3},
+      {"term": "metrics", "weight": 3},
+      {"term": "specific example", "weight": 2},
+      {"term": "data", "weight": 2},
+      {"term": "results", "weight": 2},
+      {"term": "impact", "weight": 2},
+      {"term": "JP Morgan", "weight": 2},
+      {"term": "collaboration", "weight": 2},
+      {"term": "leadership", "weight": 2},
+      {"term": "initiative", "weight": 2},
+      {"term": "strategic", "weight": 3},
+      {"term": "client", "weight": 2},
+      {"term": "value", "weight": 2},
+      {"term": "innovative", "weight": 2},
+      {"term": "analytical", "weight": 2}
+    ],
+    "negative": [
+      {"term": "I think", "weight": -1},
+      {"term": "maybe", "weight": -1},
+      {"term": "probably", "weight": -1},
+      {"term": "kind of", "weight": -2},
+      {"term": "sort of", "weight": -2},
+      {"term": "basically", "weight": -1},
+      {"term": "I guess", "weight": -2},
+      {"term": "not sure", "weight": -2},
+      {"term": "don't know", "weight": -3},
+      {"term": "whatever", "weight": -3},
+      {"term": "they didn't", "weight": -2},
+      {"term": "their fault", "weight": -3},
+      {"term": "wasn't my fault", "weight": -3},
+      {"term": "boring", "weight": -2},
+      {"term": "easy", "weight": -1},
+      {"term": "simple", "weight": -1},
+      {"term": "just", "weight": -1},
+      {"term": "only", "weight": -1},
+      {"term": "minimal", "weight": -1},
+      {"term": "last minute", "weight": -2}
+    ]
+  },
+  "structureAnalysis": {
+    "STAR": {
+      "elements": ["Situation", "Task", "Action", "Result"],
+      "weightage": 0.25,
+      "description": "Evaluates whether the response follows the STAR (Situation, Task, Action, Result) framework"
+    },
+    "Quantification": {
+      "elements": ["Specific metrics", "Percentages", "Time periods", "Numerical outcomes"],
+      "weightage": 0.25,
+      "description": "Evaluates the degree to which the response includes specific, quantifiable elements"
+    },
+    "JPMorganAlignment": {
+      "elements": ["Culture reference", "Values reference", "Business principles", "Industry relevance"],
+      "weightage": 0.25,
+      "description": "Evaluates how well the response aligns with JP Morgan's specific culture and values"
+    },
+    "Sophistication": {
+      "elements": ["Technical terminology", "Complex concepts", "Nuanced understanding", "Strategic thinking"],
+      "weightage": 0.25,
+      "description": "Evaluates the level of sophistication and depth in the response"
+    }
+  },
+  "feedbackAlgorithm": {
+    "description": "The algorithm analyzes user responses across multiple dimensions to provide a comprehensive rating and personalized feedback",
+    "components": [
+      {
+        "name": "KeywordAnalysis",
+        "weight": 0.2,
+        "description": "Identifies positive and negative keywords/phrases in the response"
+      },
+      {
+        "name": "StructureAnalysis",
+        "weight": 0.3,
+        "description": "Evaluates the response structure against ideal frameworks (STAR, etc.)"
+      },
+      {
+        "name": "ContentComparison",
+        "weight": 0.4,
+        "description": "Compares response content to sample answers at different quality levels"
+      },
+      {
+        "name": "LengthAnalysis",
+        "weight": 0.1,
+        "description": "Evaluates response length and detail level against expectations"
+      }
+    ],
+    "ratingThresholds": {
+      "excellent": 0.85,
+      "good": 0.7,
+      "average": 0.5,
+      "poor": 0.3,
+      "veryPoor": 0
+    }
+  }
+}

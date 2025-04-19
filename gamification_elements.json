@@ -1,0 +1,411 @@
+{
+  "achievements": [
+    {
+      "id": "teamwork_novice",
+      "name": "Teamwork Novice",
+      "description": "Answer 5 teamwork questions with at least an 'Average' rating",
+      "icon": "🤝",
+      "points": 50
+    },
+    {
+      "id": "teamwork_expert",
+      "name": "Teamwork Expert",
+      "description": "Answer 10 teamwork questions with at least a 'Good' rating",
+      "icon": "👥",
+      "points": 100
+    },
+    {
+      "id": "teamwork_master",
+      "name": "Teamwork Master",
+      "description": "Answer 15 teamwork questions with at least 3 'Excellent' ratings",
+      "icon": "🏆",
+      "points": 200
+    },
+    {
+      "id": "analytical_novice",
+      "name": "Analytical Novice",
+      "description": "Answer 5 analytical skills questions with at least an 'Average' rating",
+      "icon": "📊",
+      "points": 50
+    },
+    {
+      "id": "analytical_expert",
+      "name": "Analytical Expert",
+      "description": "Answer 10 analytical skills questions with at least a 'Good' rating",
+      "icon": "📈",
+      "points": 100
+    },
+    {
+      "id": "analytical_master",
+      "name": "Analytical Master",
+      "description": "Answer 15 analytical skills questions with at least 3 'Excellent' ratings",
+      "icon": "🧠",
+      "points": 200
+    },
+    {
+      "id": "drive_novice",
+      "name": "Results-Driven Novice",
+      "description": "Answer 5 drive for results questions with at least an 'Average' rating",
+      "icon": "🎯",
+      "points": 50
+    },
+    {
+      "id": "drive_expert",
+      "name": "Results-Driven Expert",
+      "description": "Answer 10 drive for results questions with at least a 'Good' rating",
+      "icon": "⏱️",
+      "points": 100
+    },
+    {
+      "id": "drive_master",
+      "name": "Results-Driven Master",
+      "description": "Answer 15 drive for results questions with at least 3 'Excellent' ratings",
+      "icon": "🚀",
+      "points": 200
+    },
+    {
+      "id": "presentation_novice",
+      "name": "Presentation Novice",
+      "description": "Answer 5 presentation skills questions with at least an 'Average' rating",
+      "icon": "🎤",
+      "points": 50
+    },
+    {
+      "id": "presentation_expert",
+      "name": "Presentation Expert",
+      "description": "Answer 10 presentation skills questions with at least a 'Good' rating",
+      "icon": "📝",
+      "points": 100
+    },
+    {
+      "id": "presentation_master",
+      "name": "Presentation Master",
+      "description": "Answer 15 presentation skills questions with at least 3 'Excellent' ratings",
+      "icon": "🎭",
+      "points": 200
+    },
+    {
+      "id": "markets_novice",
+      "name": "Markets Novice",
+      "description": "Answer 5 technical markets questions with at least an 'Average' rating",
+      "icon": "📉",
+      "points": 50
+    },
+    {
+      "id": "markets_expert",
+      "name": "Markets Expert",
+      "description": "Answer 10 technical markets questions with at least a 'Good' rating",
+      "icon": "💹",
+      "points": 100
+    },
+    {
+      "id": "markets_master",
+      "name": "Markets Master",
+      "description": "Answer 15 technical markets questions with at least 3 'Excellent' ratings",
+      "icon": "📊",
+      "points": 200
+    },
+    {
+      "id": "consistency_streak",
+      "name": "Consistency Champion",
+      "description": "Practice for 5 consecutive days",
+      "icon": "🔥",
+      "points": 150
+    },
+    {
+      "id": "jp_morgan_culture",
+      "name": "Culture Connoisseur",
+      "description": "Complete the JP Morgan culture quiz with at least 90% accuracy",
+      "icon": "🏛️",
+      "points": 100
+    },
+    {
+      "id": "interview_ready",
+      "name": "Interview Ready",
+      "description": "Complete at least 3 full interview simulations with an average 'Good' rating",
+      "icon": "🎓",
+      "points": 250
+    },
+    {
+      "id": "feedback_master",
+      "name": "Feedback Master",
+      "description": "Improve your rating on 10 questions after reviewing feedback",
+      "icon": "📈",
+      "points": 150
+    },
+    {
+      "id": "speed_thinker",
+      "name": "Speed Thinker",
+      "description": "Successfully answer 5 questions in timed mode under 3 minutes each",
+      "icon": "⏱️",
+      "points": 100
+    }
+  ],
+  "levels": [
+    {
+      "level": 1,
+      "name": "Interview Novice",
+      "pointsRequired": 0,
+      "description": "Just starting your JP Morgan interview preparation journey"
+    },
+    {
+      "level": 2,
+      "name": "Interview Apprentice",
+      "pointsRequired": 200,
+      "description": "Building foundational interview skills"
+    },
+    {
+      "level": 3,
+      "name": "Interview Enthusiast",
+      "pointsRequired": 500,
+      "description": "Developing solid interview capabilities"
+    },
+    {
+      "level": 4,
+      "name": "Interview Specialist",
+      "pointsRequired": 1000,
+      "description": "Demonstrating specialized interview knowledge"
+    },
+    {
+      "level": 5,
+      "name": "Interview Expert",
+      "pointsRequired": 2000,
+      "description": "Mastering advanced interview techniques"
+    },
+    {
+      "level": 6,
+      "name": "JP Morgan Candidate",
+      "pointsRequired": 3500,
+      "description": "Ready for your JP Morgan interview"
+    },
+    {
+      "level": 7,
+      "name": "JP Morgan Prospect",
+      "pointsRequired": 5000,
+      "description": "Positioned as a strong JP Morgan candidate"
+    },
+    {
+      "level": 8,
+      "name": "Future Analyst",
+      "pointsRequired": 7500,
+      "description": "Demonstrating the qualities of a JP Morgan analyst"
+    }
+  ],
+  "dailyChallenges": [
+    {
+      "id": "behavioral_mix",
+      "name": "Behavioral Blitz",
+      "description": "Answer 5 behavioral questions from different competency areas with at least a 'Good' rating",
+      "points": 100
+    },
+    {
+      "id": "technical_deep_dive",
+      "name": "Technical Deep Dive",
+      "description": "Answer 3 advanced technical questions with at least a 'Good' rating",
+      "points": 100
+    },
+    {
+      "id": "speed_round",
+      "name": "Speed Round",
+      "description": "Answer 10 questions in under 30 minutes with at least an 'Average' rating",
+      "points": 150
+    },
+    {
+      "id": "excellence_pursuit",
+      "name": "Excellence Pursuit",
+      "description": "Achieve an 'Excellent' rating on 3 questions from different categories",
+      "points": 200
+    },
+    {
+      "id": "weakness_focus",
+      "name": "Weakness Focus",
+      "description": "Improve your rating on 3 questions from your lowest-performing competency area",
+      "points": 150
+    },
+    {
+      "id": "culture_connection",
+      "name": "Culture Connection",
+      "description": "Answer 5 questions while explicitly connecting your responses to JP Morgan's culture and values",
+      "points": 100
+    },
+    {
+      "id": "simulation_success",
+      "name": "Simulation Success",
+      "description": "Complete a full interview simulation with an average 'Good' rating",
+      "points": 200
+    }
+  ],
+  "streakBonuses": [
+    {
+      "days": 3,
+      "points": 50,
+      "description": "3-Day Streak: Building momentum!"
+    },
+    {
+      "days": 5,
+      "points": 100,
+      "description": "5-Day Streak: Consistency is key!"
+    },
+    {
+      "days": 7,
+      "points": 150,
+      "description": "7-Day Streak: A full week of preparation!"
+    },
+    {
+      "days": 10,
+      "points": 250,
+      "description": "10-Day Streak: Dedicated preparation!"
+    },
+    {
+      "days": 14,
+      "points": 350,
+      "description": "14-Day Streak: Two weeks of excellence!"
+    },
+    {
+      "days": 21,
+      "points": 500,
+      "description": "21-Day Streak: You've formed a habit!"
+    },
+    {
+      "days": 30,
+      "points": 1000,
+      "description": "30-Day Streak: Ultimate dedication!"
+    }
+  ],
+  "interviewModes": [
+    {
+      "id": "practice_mode",
+      "name": "Practice Mode",
+      "description": "Take your time to craft thoughtful responses with no time pressure",
+      "features": ["Unlimited time", "Full feedback", "Rating explanation", "Sample answer comparison"]
+    },
+    {
+      "id": "timed_mode",
+      "name": "Timed Mode",
+      "description": "Practice answering questions under time constraints (3 minutes per question)",
+      "features": ["3-minute timer", "Full feedback after submission", "Bonus points for quick, quality answers"]
+    },
+    {
+      "id": "simulation_mode",
+      "name": "Interview Simulation",
+      "description": "Experience a full JP Morgan interview with mixed questions and realistic timing",
+      "features": ["45-minute session", "10-12 mixed questions", "Limited feedback during simulation", "Comprehensive feedback report after completion"]
+    },
+    {
+      "id": "weakness_targeting",
+      "name": "Weakness Targeting",
+      "description": "Focus specifically on your lowest-performing competency areas",
+      "features": ["Questions from your weakest areas", "Enhanced feedback", "Improvement tracking"]
+    },
+    {
+      "id": "daily_challenge",
+      "name": "Daily Challenge",
+      "description": "Complete a unique daily challenge for bonus points",
+      "features": ["New challenge every day", "Bonus points", "Special achievements"]
+    }
+  ],
+  "progressMilestones": [
+    {
+      "id": "first_question",
+      "name": "First Steps",
+      "description": "Answer your first interview question",
+      "points": 10
+    },
+    {
+      "id": "first_good",
+      "name": "Good Start",
+      "description": "Receive your first 'Good' rating",
+      "points": 25
+    },
+    {
+      "id": "first_excellent",
+      "name": "Excellence Achieved",
+      "description": "Receive your first 'Excellent' rating",
+      "points": 50
+    },
+    {
+      "id": "competency_complete",
+      "name": "Competency Explorer",
+      "description": "Answer at least one question from each competency area",
+      "points": 75
+    },
+    {
+      "id": "first_simulation",
+      "name": "Simulation Survivor",
+      "description": "Complete your first full interview simulation",
+      "points": 100
+    },
+    {
+      "id": "improvement_journey",
+      "name": "Improvement Journey",
+      "description": "Improve your rating on a question after reviewing feedback",
+      "points": 50
+    },
+    {
+      "id": "question_milestone_25",
+      "name": "Question Milestone: 25",
+      "description": "Answer 25 different interview questions",
+      "points": 100
+    },
+    {
+      "id": "question_milestone_50",
+      "name": "Question Milestone: 50",
+      "description": "Answer 50 different interview questions",
+      "points": 200
+    },
+    {
+      "id": "question_milestone_100",
+      "name": "Question Milestone: 100",
+      "description": "Answer 100 different interview questions",
+      "points": 500
+    },
+    {
+      "id": "question_milestone_200",
+      "name": "Question Milestone: 200",
+      "description": "Answer 200 different interview questions",
+      "points": 1000
+    }
+  ],
+  "celebrationMessages": [
+    {
+      "trigger": "level_up",
+      "messages": [
+        "Congratulations! You've reached level {level}: {level_name}!",
+        "Level up! You're now a {level_name} (Level {level})!",
+        "Your interview skills are growing! Welcome to level {level}: {level_name}!"
+      ]
+    },
+    {
+      "trigger": "achievement_unlocked",
+      "messages": [
+        "Achievement unlocked: {achievement_name}! {achievement_description}",
+        "New achievement: {achievement_name}! {points} points added to your score!",
+        "You've earned the {achievement_name} achievement! Keep up the great work!"
+      ]
+    },
+    {
+      "trigger": "streak_milestone",
+      "messages": [
+        "{streak_description} You've earned {points} bonus points!",
+        "Impressive consistency! {streak_description} {points} points added!",
+        "Your dedication is paying off! {streak_description} Enjoy {points} bonus points!"
+      ]
+    },
+    {
+      "trigger": "excellent_rating",
+      "messages": [
+        "Outstanding! Your answer received an 'Excellent' rating!",
+        "Exceptional response! That's exactly what JP Morgan is looking for!",
+        "Brilliant answer! You've demonstrated the qualities of a top JP Morgan candidate!"
+      ]
+    },
+    {
+      "trigger": "improvement",
+      "messages": [
+        "You're improving! Your rating on this question has increased from {old_rating} to {new_rating}!",
+        "Progress alert! You've improved from {old_rating} to {new_rating} on this question!",
+        "Your hard work is paying off! Your rating has improved from {old_rating} to {new_rating}!"
+      ]
+    }
+  ]
+}

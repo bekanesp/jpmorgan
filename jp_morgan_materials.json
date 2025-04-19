@@ -1,0 +1,371 @@
+{
+  "companyOverview": {
+    "title": "JP Morgan Chase & Co. Overview",
+    "description": "JP Morgan Chase & Co. is a leading global financial services firm with assets of $3.7 trillion and operations worldwide. The firm is a leader in investment banking, financial services for consumers and small businesses, commercial banking, financial transaction processing, and asset management.",
+    "foundedYear": 1799,
+    "headquarters": "New York, NY",
+    "employees": "Over 250,000 worldwide",
+    "ceo": "Jamie Dimon",
+    "divisions": [
+      "Asset & Wealth Management",
+      "Commercial Banking",
+      "Consumer & Community Banking",
+      "Corporate & Investment Bank"
+    ],
+    "globalMarketsDivision": {
+      "description": "The Global Markets division sits within the Corporate & Investment Bank and is responsible for helping clients navigate markets and manage risk across asset classes including equities, fixed income, currencies, and commodities.",
+      "keyAreas": [
+        "Sales",
+        "Trading",
+        "Research",
+        "Structuring",
+        "Market Making",
+        "Risk Management"
+      ]
+    }
+  },
+  "summerAnalystProgram": {
+    "title": "Global Markets Summer Analyst Program",
+    "description": "The Global Markets Summer Analyst Program is a 10-week internship designed to provide undergraduate students with hands-on experience in sales, trading, and research within the financial markets.",
+    "eligibility": "Undergraduate students in their penultimate year of study",
+    "duration": "10 weeks (typically June-August)",
+    "locations": [
+      "New York",
+      "London",
+      "Hong Kong",
+      "Singapore",
+      "Other global financial centers"
+    ],
+    "rotations": "Typically includes rotations across different desks/asset classes",
+    "responsibilities": [
+      "Supporting trading and sales activities",
+      "Conducting market research and analysis",
+      "Building financial models and valuation tools",
+      "Participating in client meetings and calls",
+      "Completing a summer project with presentation"
+    ],
+    "careerPath": "Successful summer analysts may receive full-time analyst offers",
+    "skillsValued": [
+      "Strong analytical and quantitative abilities",
+      "Excellent communication and interpersonal skills",
+      "Interest in financial markets and economic trends",
+      "Ability to work effectively in fast-paced environments",
+      "Technical proficiency with financial software and data analysis"
+    ]
+  },
+  "coreValues": {
+    "title": "JP Morgan Core Values and Culture",
+    "businessPrinciples": [
+      {
+        "principle": "Exceptional Client Service",
+        "description": "JP Morgan is committed to providing first-class business in a first-class way, delivering exceptional services to clients and customers."
+      },
+      {
+        "principle": "Operational Excellence",
+        "description": "The firm strives for operational excellence, with a focus on efficiency, quality, and continuous improvement."
+      },
+      {
+        "principle": "Integrity, Fairness, and Responsibility",
+        "description": "JP Morgan maintains the highest standards of integrity in everything they do, treating customers and colleagues with fairness and respect."
+      },
+      {
+        "principle": "A Great Team and Winning Culture",
+        "description": "The firm values diversity, inclusion, and a collaborative environment where employees can thrive and contribute to the company's success."
+      },
+      {
+        "principle": "Long-term Perspective",
+        "description": "JP Morgan takes a long-term view in its business decisions, focusing on sustainable growth and value creation."
+      }
+    ],
+    "culturalAttributes": [
+      {
+        "attribute": "Meritocratic Environment",
+        "description": "JP Morgan rewards performance and contribution, providing opportunities for advancement based on merit."
+      },
+      {
+        "attribute": "Intellectual Rigor",
+        "description": "The firm values analytical thinking, data-driven decision making, and thoughtful problem-solving."
+      },
+      {
+        "attribute": "Client-Centric Approach",
+        "description": "JP Morgan puts clients at the center of everything they do, focusing on understanding and meeting their needs."
+      },
+      {
+        "attribute": "Risk-Conscious Culture",
+        "description": "The firm emphasizes prudent risk management and a strong control environment."
+      },
+      {
+        "attribute": "Innovation and Adaptation",
+        "description": "JP Morgan encourages innovation and the ability to adapt to changing market conditions and client needs."
+      }
+    ]
+  },
+  "interviewProcess": {
+    "title": "JP Morgan Global Markets Interview Process",
+    "stages": [
+      {
+        "stage": "Online Application",
+        "description": "Submit resume, cover letter, and complete online application form"
+      },
+      {
+        "stage": "Online Assessments",
+        "description": "Complete psychometric tests, situational judgment tests, and potentially a video interview"
+      },
+      {
+        "stage": "First Round Interview",
+        "description": "Usually 30-45 minute interviews with HR or junior bankers, focusing on behavioral questions and basic technical knowledge"
+      },
+      {
+        "stage": "Superday/Assessment Center",
+        "description": "Full day of multiple interviews with various team members, potentially including case studies, group exercises, and presentations"
+      },
+      {
+        "stage": "Offer",
+        "description": "Successful candidates receive offers, typically within 1-2 weeks after final round"
+      }
+    ],
+    "interviewFocus": {
+      "behavioral": "Questions about past experiences, teamwork, leadership, and problem-solving",
+      "technical": "Questions testing financial markets knowledge, valuation concepts, and economic understanding",
+      "fit": "Questions assessing cultural fit, motivation, and career goals"
+    },
+    "keyPreparationAreas": [
+      "Understanding of financial markets and current events",
+      "Knowledge of JP Morgan's business model and culture",
+      "Ability to articulate past experiences using the STAR method",
+      "Technical concepts related to markets, trading, and valuation",
+      "Clear articulation of why you want to work in Global Markets at JP Morgan specifically"
+    ]
+  },
+  "technicalConcepts": {
+    "title": "Key Technical Concepts for JP Morgan Global Markets Interviews",
+    "marketsConcepts": [
+      {
+        "concept": "Yield Curve",
+        "description": "The relationship between interest rates and time to maturity for debt securities. Shapes include normal (upward sloping), inverted, and flat.",
+        "importance": "Critical for understanding fixed income markets, monetary policy expectations, and economic outlook."
+      },
+      {
+        "concept": "Duration",
+        "description": "A measure of a bond's sensitivity to interest rate changes, expressed in years. Higher duration means greater price sensitivity.",
+        "importance": "Essential for risk management in fixed income portfolios and understanding bond price movements."
+      },
+      {
+        "concept": "Volatility",
+        "description": "A statistical measure of the dispersion of returns for a given security or market index, often expressed as standard deviation.",
+        "importance": "Key for options pricing, risk assessment, and understanding market conditions."
+      },
+      {
+        "concept": "Derivatives",
+        "description": "Financial instruments whose value is derived from an underlying asset or benchmark (e.g., futures, options, swaps).",
+        "importance": "Central to risk management, hedging strategies, and structured products in Global Markets."
+      },
+      {
+        "concept": "Market Making",
+        "description": "The process of providing liquidity by quoting both buy and sell prices for financial instruments.",
+        "importance": "Core function of Global Markets, generating revenue through bid-ask spreads."
+      }
+    ],
+    "economicConcepts": [
+      {
+        "concept": "Monetary Policy",
+        "description": "Central bank actions to influence money supply and interest rates to achieve macroeconomic objectives.",
+        "importance": "Drives market movements across asset classes and affects trading strategies."
+      },
+      {
+        "concept": "Inflation",
+        "description": "The rate at which the general level of prices for goods and services rises, eroding purchasing power.",
+        "importance": "Influences central bank decisions, bond yields, and relative asset valuations."
+      },
+      {
+        "concept": "GDP Growth",
+        "description": "The increase in a country's production of goods and services, typically measured annually or quarterly.",
+        "importance": "Indicator of economic health affecting corporate earnings and market sentiment."
+      },
+      {
+        "concept": "Fiscal Policy",
+        "description": "Government decisions on taxation and spending to influence economic conditions.",
+        "importance": "Affects government bond issuance, yield curves, and overall market conditions."
+      }
+    ],
+    "valuationConcepts": [
+      {
+        "concept": "Discounted Cash Flow (DCF)",
+        "description": "Valuation method that estimates the value of an investment based on its expected future cash flows, discounted to present value.",
+        "importance": "Fundamental approach to equity valuation and investment analysis."
+      },
+      {
+        "concept": "Price-to-Earnings Ratio (P/E)",
+        "description": "Ratio of a company's share price to its earnings per share, indicating how much investors are willing to pay for each dollar of earnings.",
+        "importance": "Common metric for comparing relative valuations across companies or sectors."
+      },
+      {
+        "concept": "EBITDA Multiples",
+        "description": "Enterprise Value divided by Earnings Before Interest, Taxes, Depreciation, and Amortization, used for company valuation.",
+        "importance": "Frequently used in comparative company analysis and M&A transactions."
+      },
+      {
+        "concept": "Capital Asset Pricing Model (CAPM)",
+        "description": "Model that describes the relationship between systematic risk and expected return for assets, particularly stocks.",
+        "importance": "Used to determine cost of equity and evaluate investment performance."
+      }
+    ]
+  },
+  "interviewDayPreparation": {
+    "title": "JP Morgan Interview Day Preparation",
+    "beforeInterview": [
+      {
+        "tip": "Research Current Market Events",
+        "description": "Review financial news, market trends, and recent JP Morgan research reports. Be prepared to discuss current events affecting global markets."
+      },
+      {
+        "tip": "Practice Your Story",
+        "description": "Refine your narrative about why you're interested in markets, your relevant experiences, and why JP Morgan specifically."
+      },
+      {
+        "tip": "Review Technical Concepts",
+        "description": "Ensure you understand fundamental concepts related to financial markets, economics, and valuation methods."
+      },
+      {
+        "tip": "Prepare Questions",
+        "description": "Develop thoughtful questions about the role, team, and firm that demonstrate your interest and research."
+      },
+      {
+        "tip": "Mock Interviews",
+        "description": "Conduct practice interviews with peers or mentors, focusing on both behavioral and technical questions."
+      }
+    ],
+    "dayOfInterview": [
+      {
+        "tip": "Arrive Early",
+        "description": "Plan to arrive 15-20 minutes before your scheduled interview time to account for security and check-in procedures."
+      },
+      {
+        "tip": "Dress Professionally",
+        "description": "Wear formal business attire (suit and tie for men, business suit for women) in conservative colors."
+      },
+      {
+        "tip": "Bring Materials",
+        "description": "Bring multiple copies of your resume, a notepad, pen, and any requested documents."
+      },
+      {
+        "tip": "Check Markets",
+        "description": "Review major market indices and significant news before your interview to be prepared for market-related discussions."
+      },
+      {
+        "tip": "Manage Stress",
+        "description": "Use breathing techniques or other stress management strategies to remain calm and focused."
+      }
+    ],
+    "duringInterview": [
+      {
+        "tip": "Structure Your Answers",
+        "description": "Use the STAR method (Situation, Task, Action, Result) for behavioral questions to provide clear, concise responses."
+      },
+      {
+        "tip": "Show Enthusiasm",
+        "description": "Demonstrate genuine interest in markets, the role, and JP Morgan through your energy and engagement."
+      },
+      {
+        "tip": "Be Specific",
+        "description": "Provide concrete examples and quantifiable results when discussing your experiences and achievements."
+      },
+      {
+        "tip": "Listen Carefully",
+        "description": "Pay close attention to questions and ask for clarification if needed before responding."
+      },
+      {
+        "tip": "Be Authentic",
+        "description": "While being professional, let your personality show to help interviewers assess cultural fit."
+      }
+    ],
+    "afterInterview": [
+      {
+        "tip": "Send Thank You Notes",
+        "description": "Email personalized thank you notes to your interviewers within 24 hours, referencing specific discussion points."
+      },
+      {
+        "tip": "Reflect and Improve",
+        "description": "Note what went well and areas for improvement to prepare for potential future rounds."
+      },
+      {
+        "tip": "Follow Up Appropriately",
+        "description": "If you haven't heard back within the expected timeframe, a polite follow-up email is appropriate."
+      }
+    ]
+  },
+  "commonPitfalls": {
+    "title": "Common Interview Pitfalls to Avoid",
+    "pitfalls": [
+      {
+        "pitfall": "Lack of Specific Examples",
+        "description": "Providing generic responses without concrete examples from your experience.",
+        "solution": "Prepare detailed STAR method stories for common behavioral questions, with quantifiable results."
+      },
+      {
+        "pitfall": "Insufficient Market Knowledge",
+        "description": "Being unable to discuss current market events or demonstrate basic financial concepts.",
+        "solution": "Read financial news daily, follow market trends, and review key technical concepts before your interview."
+      },
+      {
+        "pitfall": "Unclear Motivation",
+        "description": "Failing to articulate why you want to work in Global Markets at JP Morgan specifically.",
+        "solution": "Research the firm thoroughly and develop a compelling narrative about your interest in markets and JP Morgan."
+      },
+      {
+        "pitfall": "Overconfidence",
+        "description": "Coming across as arrogant or dismissive, particularly during technical discussions.",
+        "solution": "Balance confidence with humility; acknowledge when you don't know something and show willingness to learn."
+      },
+      {
+        "pitfall": "Poor Communication",
+        "description": "Rambling, using filler words, or failing to structure answers clearly.",
+        "solution": "Practice concise, structured responses and active listening; ask clarifying questions when needed."
+      },
+      {
+        "pitfall": "Negativity About Past Experiences",
+        "description": "Speaking critically about previous employers, colleagues, or professors.",
+        "solution": "Frame all experiences positively, focusing on lessons learned and growth opportunities."
+      },
+      {
+        "pitfall": "Lack of Team Orientation",
+        "description": "Overemphasizing individual achievements without acknowledging team contributions.",
+        "solution": "Highlight both your specific contributions and how you worked effectively with others."
+      },
+      {
+        "pitfall": "Failure to Ask Questions",
+        "description": "Having no questions or asking basic questions easily answered by the website.",
+        "solution": "Prepare thoughtful questions about the team, culture, and recent developments at the firm."
+      }
+    ]
+  },
+  "recoveryStrategies": {
+    "title": "Interview Recovery Strategies",
+    "strategies": [
+      {
+        "scenario": "You don't know the answer to a technical question",
+        "strategy": "Acknowledge your uncertainty, demonstrate your thought process, and explain how you would approach finding the answer."
+      },
+      {
+        "scenario": "You misunderstood a question",
+        "strategy": "Ask for clarification, then reset and provide a more appropriate response."
+      },
+      {
+        "scenario": "You're asked about a weakness or failure",
+        "strategy": "Be honest but strategic, focusing on what you learned and how you've improved as a result."
+      },
+      {
+        "scenario": "You're interrupted or thrown off track",
+        "strategy": "Pause briefly to collect your thoughts, then continue with a clear structure or politely ask to finish your point."
+      },
+      {
+        "scenario": "You receive challenging follow-up questions",
+        "strategy": "Stay calm, consider the question carefully, and respond thoughtfully rather than defensively."
+      },
+      {
+        "scenario": "You made a factual error",
+        "strategy": "If you realize it during the interview, politely correct yourself; it shows attention to detail and integrity."
+      }
+    ]
+  }
+}

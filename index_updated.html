@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JP Morgan Interview Preparation Tool</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --jp-blue: #0f285e;
+            --jp-light-blue: #1e4b94;
+            --jp-gold: #c99700;
+            --jp-light-gold: #e6b012;
+            --jp-gray: #333333;
+            --jp-light-gray: #f5f5f5;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .navbar {
+            background-color: var(--jp-blue);
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: white !important;
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.85) !important;
+        }
+        
+        .nav-link:hover {
+            color: white !important;
+        }
+        
+        .btn-primary {
+            background-color: var(--jp-blue);
+            border-color: var(--jp-blue);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--jp-light-blue);
+            border-color: var(--jp-light-blue);
+        }
+        
+        .btn-secondary {
+            background-color: var(--jp-gold);
+            border-color: var(--jp-gold);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--jp-light-gold);
+            border-color: var(--jp-light-gold);
+            color: white;
+        }
+        
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border: none;
+        }
+        
+        .card-header {
+            background-color: var(--jp-blue);
+            color: white;
+            font-weight: bold;
+            border-radius: 8px 8px 0 0 !important;
+        }
+        
+        .progress-bar {
+            background-color: var(--jp-blue);
+        }
+        
+        .badge-primary {
+            background-color: var(--jp-blue);
+        }
+        
+        .badge-secondary {
+            background-color: var(--jp-gold);
+        }
+        
+        .list-group-item.active {
+            background-color: var(--jp-blue);
+            border-color: var(--jp-blue);
+        }
+        
+        .dashboard-card {
+            height: 100%;
+            transition: transform 0.3s;
+        }
+        
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .achievement-badge {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .countdown-timer {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--jp-blue);
+        }
+        
+        .streak-counter {
+            background-color: var(--jp-gold);
+            color: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .question-card {
+            border-left: 5px solid var(--jp-blue);
+        }
+        
+        .answer-feedback {
+            border-left: 5px solid var(--jp-gold);
+            padding: 15px;
+            margin-top: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        .rating-excellent {
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .rating-good {
+            color: #17a2b8;
+            font-weight: bold;
+        }
+        
+        .rating-average {
+            color: #ffc107;
+            font-weight: bold;
+        }
+        
+        .rating-poor {
+            color: #fd7e14;
+            font-weight: bold;
+        }
+        
+        .rating-verypoor {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        
+        .flashcard {
+            perspective: 1000px;
+            height: 300px;
+            margin-bottom: 30px;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-front, .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .flashcard-front {
+            background-color: white;
+            color: var(--jp-blue);
+        }
+        
+        .flashcard-back {
+            background-color: var(--jp-blue);
+            color: white;
+            transform: rotateY(180deg);
+        }
+        
+        .level-indicator {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 15px;
+            background-color: var(--jp-blue);
+            color: white;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        
+        .timer-container {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .timer-warning {
+            color: #dc3545;
+        }
+        
+        .celebration {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1050;
+        }
+        
+        .celebration-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 500px;
+        }
+        
+        .celebration-icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            color: var(--jp-gold);
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .tab-content {
+            padding: 20px 0;
+        }
+        
+        #interviewCountdown {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--jp-blue);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .daily-challenge-card {
+            border-left: 5px solid var(--jp-gold);
+        }
+        
+        .resource-card {
+            height: 100%;
+        }
+        
+        .resource-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--jp-blue);
+        }
+        
+        .progress-chart {
+            height: 250px;
+            margin-bottom: 20px;
+        }
+        
+        .competency-progress {
+            margin-bottom: 10px;
+        }
+        
+        .answer-input {
+            min-height: 150px;
+        }
+        
+        .sample-answer-toggle {
+            cursor: pointer;
+            color: var(--jp-blue);
+            text-decoration: underline;
+        }
+        
+        .sample-answer {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 3px solid var(--jp-gold);
+        }
+    
+  .super-hard-tag {
+    background-color: #ff3b30;
+    color: white;
+    font-size: 0.7em;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-left: 5px;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+  }
+  
+  .difficulty-interview-ninja {
+    border-left: 5px solid #ff3b30 !important;
+    background-color: rgba(255, 59, 48, 0.05);
+  }
+  
+  .interview-ninja-banner {
+    background: linear-gradient(135deg, #ff3b30, #8a0900);
+    color: white;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+</style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">JP Morgan Interview Prep</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-bs-target="dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-target="practice">Practice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-target="resources">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-target="progress">Progress</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="streak-counter">3</div>
+                    <div class="text-white">Day Streak</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <!-- Dashboard Section -->
+        <div id="dashboard" class="content-section">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Interview Countdown</h5>
+                            <div id="interviewCountdown">3 Days : 7 Hours : 42 Minutes</div>
+                            <p class="card-text">Your JP Morgan Global Markets Summer Analyst interview is approaching!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="card dashboard-card">
+                        <div class="card-header">
+                            Your Progress
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Level 3: Interview Enthusiast <span class="badge bg-primary">500 pts</span></h5>
+                            <p class="card-text">500 / 1000 points to next level</p>
+                            <div class="progress mb-3">
+                                <div class="progress-bar" role="progressbar" style="width: 50%"></div>
+                            </div>
+                            <h6>Competency Breakdown:</h6>
+                            <div class="competency-progress">
+                                <div class="d-flex justify-content-between">
+                                    <span>Teamwork</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="competency-progress">
+                                <div class="d-flex justify-content-between">
+                                    <span>Analytical Skills</span>
+                                    <span>60%</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div class="competency-progress">
+                                <div class="d-flex justify-content-between">
+                                    <span>Drive for Results</span>
+                                    <span>45%</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 45%"></div>
+                                </div>
+                            </div>
+                            <div class="competency-progress">
+                                <div class="d-flex justify-content-between">
+                                    <span>Presentation Skills</span>
+                                    <span>40%</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 40%"></div>
+                                </div>
+                            </div>
+                            <div class="competency-progress">
+                                <div class="d-flex justify-content-between">
+                                    <span>Markets Knowledge</span>
+                                    <span>30%</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 30%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card dashboard-card daily-challenge-card">
+                        <div class="card-header">
+                            Daily Challenge
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Excellence Pursuit</h5>
+                            <p class="card-text">Achieve an 'Excellent' rating on 3 questions from different categories</p>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 33%"></div>
+                            </div>
+                            <p>Progress: 1/3 completed</p>
+                            <p><strong>Reward:</strong> 200 points</p>
+                            <button class="btn btn-secondary">Start Challenge</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <div class="card dashboard-card">
+                        <div class="card-body text-center">
+                            <div class="achievement-badge">🏆</div>
+                            <h5 class="card-title">Recent Achievement</h5>
+                            <p class="card-title">Teamwork Expert</p>
+                            <p class="card-text">Answer 10 teamwork questions with at least a 'Good' rating</p>
+                            <span class="badge bg-secondary">+100 pts</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card dashboard-card">
+                        <div class="card-body text-center">
+                            <div class="achievement-badge">📈</div>
+                            <h5 class="card-title">Improvement Area</h5>
+                            <p class="card-title">Markets Knowledge</p>
+                            <p class="card-text">Focus on technical concepts related to financial markets</p>
+                            <button class="btn btn-primary btn-sm">Practice Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card dashboard-card">
+                        <div class="card-body text-center">
+                            <div class="achievement-badge">🎯</div>
+                            <h5 class="card-title">Recommended Practice</h5>
+                            <p class="card-title">Interview Simulation</p>
+                            <p class="card-text">Complete a full interview simulation to test your readiness</p>
+                            <button class="btn btn-primary btn-sm">Start Simulation</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            Quick Practice
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Ready for a quick practice session?</h5>
+                            <p class="card-text">Choose a practice mode to get started:</p>
+                            <div class="row">
+                                <div class="col-md-3 mb-2">
+                                    <button class="btn btn-primary w-100">Practice Mode</button>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                    <button class="btn btn-primary w-100">Timed Mode</button>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                    <button class="btn btn-primary w-100">Weakness Targeting</button>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                    <button class="btn btn-secondary w-100">Interview Simulation</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Practice Section -->
+        <div id="practice" class="content-section hidden">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            Practice Modes
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-3 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">Practice Mode</h5>
+                                            <p class="card-text">Take your time to craft thoughtful responses with no time pressure</p>
+                                            <button class="btn btn-primary">Start</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">Timed Mode</h5>
+                                            <p class="card-text">Practice answering questions under time constraints (3 minutes per question)</p>
+                                            <button class="btn btn-primary">Start</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">Interview Simulation</h5>
+                                            <p class="card-text">Experience a full JP Morgan interview with mixed questions</p>
+                                            <button class="btn btn-primary">Start</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">Weakness Targeting</h5>
+                                            <p class="card-text">Focus specifically on your lowest-performing competency areas</p>
+                                            <button class="btn btn-primary">Start</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card question-card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <span>Question</span>
+                            <div>
+                                <span class="badge bg-primary me-2">Behavioral</span>
+                                <span class="badge bg-secondary">Teamwork</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Describe a situation when you worked with others on a project and your teammates disagreed with your ideas. How did you respond?</h5>
+                            
+                            <div class="timer-container mt-3 mb-3 text-center">
+                                Time remaining: <span id="questionTimer">3:00</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="answerInput">Your Answer:</label>
+                                <textarea class="form-control answer-input" id="answerInput" rows="6" placeholder="Type your answer here..."></textarea>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between mt-3">
+                                <button class="btn btn-secondary">Skip</button>
+                                <button class="btn btn-primary">Submit Answer</button>
+                            </div>
+                            
+                            <div class="answer-feedback mt-4">
+                                <h5 class="rating-good">Good Response</h5>
+                                <p>Your answer shows strong alignment with JP Morgan's expectations. You've demonstrated solid effective teamwork and collaboration skills that would be valued at JP Morgan.</p>
+                                
+                                <h6>Key strengths:</h6>
+                                <ul>
+                                    <li>Willingness to consider others' perspectives</li>
+                                    <li>Finding constructive compromise</li>
+                                </ul>
+                                
+                                <h6>To reach an 'Excellent' rating, consider:</h6>
+                                <ul>
+                                    <li>Add a more structured framework for evaluating different ideas</li>
+                                    <li>Quantify the team outcome more precisely</li>
+                                    <li>Show more leadership in facilitating resolution</li>
+                                </ul>
+                                
+                                <p class="sample-answer-toggle mt-3">View sample 'Excellent' answer</p>
+                                <div class="sample-answer hidden">
+                                    <p>During my role as Finance Club Treasurer at UVA, I led a team of five developing a stock pitch for a national competition. After extensive research, I proposed focusing our pitch on a renewable energy company that I believed had strong growth potential. However, three team members strongly disagreed, advocating instead for a well-established fintech company with more predictable returns.</p>
+                                    <p>Rather than pushing my preference, I organized a structured debate session where each perspective could be thoroughly evaluated. I created a comprehensive evaluation framework with weighted criteria including growth potential, risk factors, market conditions, and alignment with competition judging criteria. This approach transformed what could have been a contentious disagreement into an analytical exercise.</p>
+                                    <p>During our evaluation, I actively listened to my teammates' concerns about the renewable company's regulatory risks and volatile earnings. I acknowledged these valid points while also encouraging the team to consider the differentiation factor in our pitch selection, as many competitors would likely choose fintech companies.</p>
+                                    <p>Ultimately, we reached consensus on a hybrid approach—pitching the fintech company but incorporating a comparative analysis with the renewable energy sector that highlighted our broader market understanding. This approach won us second place in the competition, with judges specifically commending our comprehensive market analysis and balanced perspective.</p>
+                                    <p>This experience reinforced my belief that the strongest solutions often emerge from constructive disagreement when approached with respect and analytical rigor. I've since applied this framework-based approach to resolving team disagreements in subsequent projects, focusing on transforming different viewpoints into analytical advantages rather than obstacles.</p>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mt-4">
+                                    <button class="btn btn-secondary">Try Again</button>
+                                    <button class="btn btn-primary">Next Question</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            Flashcards
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Review key concepts with our interactive flashcards:</p>
+                            
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="flashcard">
+                                        <div class="flashcard-inner">
+                                            <div class="flashcard-front">
+                                                <h5>What is Yield Curve?</h5>
+                                                <p class="text-muted">(Click to reveal answer)</p>
+                                            </div>
+                                            <div class="flashcard-back">
+                                                <p>The relationship between interest rates and time to maturity for debt securities. Shapes include normal (upward sloping), inverted, and flat.</p>
+                                                <p><strong>Critical for understanding fixed income markets, monetary policy expectations, and economic outlook.</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="flashcard">
+                                        <div class="flashcard-inner">
+                                            <div class="flashcard-front">
+                                                <h5>What is Duration?</h5>
+                                                <p class="text-muted">(Click to reveal answer)</p>
+                                            </div>
+                                            <div class="flashcard-back">
+                                                <p>A measure of a bond's sensitivity to interest rate changes, expressed in years. Higher duration means greater price sensitivity.</p>
+                                                <p><strong>Essential for risk management in fixed income portfolios and understanding bond price movements.</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="flashcard">
+                                        <div class="flashcard-inner">
+                                            <div class="flashcard-front">
+                                                <h5>What is Market Making?</h5>
+                                                <p class="text-muted">(Click to reveal answer)</p>
+                                            </div>
+                                            <div class="flashcard-back">
+                                                <p>The process of providing liquidity by quoting both buy and sell prices for financial instruments.</p>
+                                                <p><strong>Core function of Global Markets, generating revenue through bid-ask spreads.</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-3">
+                                <button class="btn btn-primary">View All Flashcards</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Resources Section -->
+        <div id="resources" class="content-section hidden">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            JP Morgan Overview
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">JP Morgan Chase & Co.</h5>
+                            <p class="card-text">JP Morgan Chase & Co. is a leading global financial services firm with assets of $3.7 trillion and operations worldwide. The firm is a leader in investment banking, financial services for consumers and small businesses, commercial banking, financial transaction processing, and asset management.</p>
+                            
+                            <h6 class="mt-3">Global Markets Division</h6>
+                            <p>The Global Markets division sits within the Corporate & Investment Bank and is responsible for helping clients navigate markets and manage risk across asset classes including equities, fixed income, currencies, and commodities.</p>
+                            
+                            <h6>Key Areas:</h6>
+                            <ul>
+                                <li>Sales</li>
+                                <li>Trading</li>
+                                <li>Research</li>
+                                <li>Structuring</li>
+                                <li>Market Making</li>
+                                <li>Risk Management</li>
+                            </ul>
+                            
+                            <button class="btn btn-primary mt-2">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            Core Values and Culture
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">JP Morgan Business Principles</h5>
+                            <ul>
+                                <li><strong>Exceptional Client Service</strong> - Providing first-class business in a first-class way</li>
+                                <li><strong>Operational Excellence</strong> - Efficiency, quality, and continuous improvement</li>
+                                <li><strong>Integrity, Fairness, and Responsibility</strong> - Highest standards in everything we do</li>
+                                <li><strong>A Great Team and Winning Culture</strong> - Valuing diversity, inclusion, and collaboration</li>
+                                <li><strong>Long-term Perspective</strong> - Sustainable growth and value creation</li>
+                            </ul>
+                            
+                            <button class="btn btn-primary mt-2">Explore Culture</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            Summer Analyst Program
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Global Markets Summer Analyst Program</h5>
+                            <p>A 10-week internship designed to provide undergraduate students with hands-on experience in sales, trading, and research within the financial markets.</p>
+                            
+                            <h6 class="mt-3">Key Responsibilities:</h6>
+                            <ul>
+                                <li>Supporting trading and sales activities</li>
+                                <li>Conducting market research and analysis</li>
+                                <li>Building financial models and valuation tools</li>
+                                <li>Participating in client meetings and calls</li>
+                                <li>Completing a summer project with presentation</li>
+                            </ul>
+                            
+                            <button class="btn btn-primary mt-2">Program Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            Technical Concepts
+                        </div>
+                        <div class="card-body">
+                            <ul class="nav nav-tabs" id="conceptTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="markets-tab" data-bs-toggle="tab" data-bs-target="#markets" type="button" role="tab">Markets Concepts</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="economic-tab" data-bs-toggle="tab" data-bs-target="#economic" type="button" role="tab">Economic Concepts</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="valuation-tab" data-bs-toggle="tab" data-bs-target="#valuation" type="button" role="tab">Valuation Concepts</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="conceptTabsContent">
+                                <div class="tab-pane fade show active" id="markets" role="tabpanel">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Yield Curve</h5>
+                                                    <p class="card-text">The relationship between interest rates and time to maturity for debt securities. Shapes include normal (upward sloping), inverted, and flat.</p>
+                                                    <p><strong>Importance:</strong> Critical for understanding fixed income markets, monetary policy expectations, and economic outlook.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Duration</h5>
+                                                    <p class="card-text">A measure of a bond's sensitivity to interest rate changes, expressed in years. Higher duration means greater price sensitivity.</p>
+                                                    <p><strong>Importance:</strong> Essential for risk management in fixed income portfolios and understanding bond price movements.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="economic" role="tabpanel">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Monetary Policy</h5>
+                                                    <p class="card-text">Central bank actions to influence money supply and interest rates to achieve macroeconomic objectives.</p>
+                                                    <p><strong>Importance:</strong> Drives market movements across asset classes and affects trading strategies.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Inflation</h5>
+                                                    <p class="card-text">The rate at which the general level of prices for goods and services rises, eroding purchasing power.</p>
+                                                    <p><strong>Importance:</strong> Influences central bank decisions, bond yields, and relative asset valuations.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="valuation" role="tabpanel">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Discounted Cash Flow (DCF)</h5>
+                                                    <p class="card-text">Valuation method that estimates the value of an investment based on its expected future cash flows, discounted to present value.</p>
+                                                    <p><strong>Importance:</strong> Fundamental approach to equity valuation and investment analysis.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Price-to-Earnings Ratio (P/E)</h5>
+                                                    <p class="card-text">Ratio of a company's share price to its earnings per share, indicating how much investors are willing to pay for each dollar of earnings.</p>
+                                                    <p><strong>Importance:</strong> Common metric for comparing relative valuations across companies or sectors.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-3">
+                                <button class="btn btn-primary">View All Technical Concepts</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            Interview Preparation Resources
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="card resource-card">
+                                        <div class="card-body text-center">
+                                            <div class="resource-icon">
+                                                <i class="bi bi-calendar-check"></i>
+                                            </div>
+                                            <h5 class="card-title">Interview Day Preparation</h5>
+                                            <p class="card-text">Comprehensive guide for before, during, and after your interview</p>
+                                            <button class="btn btn-primary btn-sm">View Guide</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card resource-card">
+                                        <div class="card-body text-center">
+                                            <div class="resource-icon">
+                                                <i class="bi bi-exclamation-triangle"></i>
+                                            </div>
+                                            <h5 class="card-title">Common Pitfalls</h5>
+                                            <p class="card-text">Mistakes to avoid and how to recover if things go wrong</p>
+                                            <button class="btn btn-primary btn-sm">View Guide</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card resource-card">
+                                        <div class="card-body text-center">
+                                            <div class="resource-icon">
+                                                <i class="bi bi-arrow-repeat"></i>
+                                            </div>
+                                            <h5 class="card-title">Recovery Strategies</h5>
+                                            <p class="card-text">How to handle challenging situations during your interview</p>
+                                            <button class="btn btn-primary btn-sm">View Guide</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Progress Section -->
+        <div id="progress" class="content-section hidden">
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            Performance Overview
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Your Interview Readiness</h5>
+                            <div class="progress-chart">
+                                <canvas id="readinessChart"></canvas>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col-4">
+                                    <h6>Questions Answered</h6>
+                                    <p class="h4">47</p>
+                                </div>
+                                <div class="col-4">
+                                    <h6>Average Rating</h6>
+                                    <p class="h4">Good</p>
+                                </div>
+                                <div class="col-4">
+                                    <h6>Completion</h6>
+                                    <p class="h4">32%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            Competency Breakdown
+                        </div>
+                        <div class="card-body">
+                            <div class="progress-chart">
+                                <canvas id="competencyChart"></canvas>
+                            </div>
+                            <div class="mt-3">
+                                <h6>Strongest Area: Teamwork</h6>
+                                <p>You consistently demonstrate strong collaborative skills and effective conflict resolution.</p>
+                                
+                                <h6>Area for Improvement: Markets Knowledge</h6>
+                                <p>Focus on strengthening your understanding of financial markets concepts and mechanisms.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            Achievement Progress
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3 mb-3">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="achievement-badge">🤝</div>
+                                            <h5 class="card-title">Teamwork Novice</h5>
+                                            <p class="card-text">Answer 5 teamwork questions with at least an 'Average' rating</p>
+                                            <span class="badge bg-success">Completed</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="achievement-badge">👥</div>
+                                            <h5 class="card-title">Teamwork Expert</h5>
+                                            <p class="card-text">Answer 10 teamwork questions with at least a 'Good' rating</p>
+                                            <span class="badge bg-success">Completed</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="achievement-badge">🏆</div>
+                                            <h5 class="card-title">Teamwork Master</h5>
+                                            <p class="card-text">Answer 15 teamwork questions with at least 3 'Excellent' ratings</p>
+                                            <div class="progress mt-2">
+                                                <div class="progress-bar" role="progressbar" style="width: 60%"></div>
+                                            </div>
+                                            <small>9/15 completed</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="achievement-badge">📊</div>
+                                            <h5 class="card-title">Analytical Novice</h5>
+                                            <p class="card-text">Answer 5 analytical skills questions with at least an 'Average' rating</p>
+                                            <span class="badge bg-success">Completed</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-3">
+                                <button class="btn btn-primary">View All Achievements</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            Recent Activity
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Activity</th>
+                                            <th>Category</th>
+                                            <th>Rating</th>
+                                            <th>Points</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Apr 19, 2025</td>
+                                            <td>Answered question: "Describe a situation when you worked with others..."</td>
+                                            <td>Teamwork</td>
+                                            <td><span class="rating-good">Good</span></td>
+                                            <td>+20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Apr 19, 2025</td>
+                                            <td>Completed daily challenge: "Excellence Pursuit"</td>
+                                            <td>Challenge</td>
+                                            <td>-</td>
+                                            <td>+200</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Apr 18, 2025</td>
+                                            <td>Answered question: "How do you prioritize tasks and projects..."</td>
+                                            <td>Drive for Results</td>
+                                            <td><span class="rating-average">Average</span></td>
+                                            <td>+10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Apr 18, 2025</td>
+                                            <td>Answered question: "Can you explain how interest rate changes..."</td>
+                                            <td>Markets Knowledge</td>
+                                            <td><span class="rating-poor">Poor</span></td>
+                                            <td>+5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Apr 17, 2025</td>
+                                            <td>Completed interview simulation</td>
+                                            <td>Simulation</td>
+                                            <td><span class="rating-average">Average</span></td>
+                                            <td>+100</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="text-center mt-3">
+                                <button class="btn btn-primary">View Full History</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Celebration Modal (Hidden by default) -->
+    <div class="celebration hidden" id="celebrationModal">
+        <div class="celebration-content">
+            <div class="celebration-icon">
+                <i class="bi bi-trophy-fill"></i>
+            </div>
+            <h3>Achievement Unlocked!</h3>
+            <h4>Teamwork Expert</h4>
+            <p>You've answered 10 teamwork questions with at least a 'Good' rating!</p>
+            <p><span class="badge bg-secondary">+100 pts</span></p>
+            <button class="btn btn-primary mt-3" id="closeCelebration">Continue</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show default section (dashboard)
+            document.getElementById('dashboard').classList.remove('hidden');
+            
+            // Navigation handling
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Update active nav link
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show selected section, hide others
+                    const targetId = this.getAttribute('data-bs-target');
+                    document.querySelectorAll('.content-section').forEach(section => {
+                        section.classList.add('hidden');
+                    });
+                    document.getElementById(targetId).classList.remove('hidden');
+                });
+            });
+            
+            // Flashcard functionality
+            const flashcards = document.querySelectorAll('.flashcard');
+            flashcards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.classList.toggle('flipped');
+                });
+            });
+            
+            // Sample answer toggle
+            const sampleAnswerToggle = document.querySelector('.sample-answer-toggle');
+            if (sampleAnswerToggle) {
+                sampleAnswerToggle.addEventListener('click', function() {
+                    const sampleAnswer = document.querySelector('.sample-answer');
+                    sampleAnswer.classList.toggle('hidden');
+                    this.textContent = sampleAnswer.classList.contains('hidden') ? 
+                        'View sample \'Excellent\' answer' : 'Hide sample answer';
+                });
+            }
+            
+            // Close celebration modal
+            const closeCelebration = document.getElementById('closeCelebration');
+            if (closeCelebration) {
+                closeCelebration.addEventListener('click', function() {
+                    document.getElementById('celebrationModal').classList.add('hidden');
+                });
+            }
+            
+            // Initialize charts if they exist
+            if (document.getElementById('readinessChart')) {
+                const readinessCtx = document.getElementById('readinessChart').getContext('2d');
+                new Chart(readinessCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Day 1', 'Day 2', 'Day 3', 'Today'],
+                        datasets: [{
+                            label: 'Interview Readiness Score',
+                            data: [25, 40, 60, 72],
+                            borderColor: '#0f285e',
+                            tension: 0.1,
+                            fill: false
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100
+                            }
+                        }
+                    }
+                });
+            }
+            
+            if (document.getElementById('competencyChart')) {
+                const competencyCtx = document.getElementById('competencyChart').getContext('2d');
+                new Chart(competencyCtx, {
+                    type: 'radar',
+                    data: {
+                        labels: [
+                            'Teamwork',
+                            'Analytical Skills',
+                            'Drive for Results',
+                            'Presentation Skills',
+                            'Markets Knowledge'
+                        ],
+                        datasets: [{
+                            label: 'Your Performance',
+                            data: [75, 60, 45, 40, 30],
+                            backgroundColor: 'rgba(15, 40, 94, 0.2)',
+                            borderColor: '#0f285e',
+                            pointBackgroundColor: '#0f285e'
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            r: {
+                                angleLines: {
+                                    display: true
+                                },
+                                suggestedMin: 0,
+                                suggestedMax: 100
+                            }
+                        }
+                    }
+                });
+            }
+            
+            // Countdown timer simulation
+            let timeLeft = 180; // 3 minutes in seconds
+            const timerElement = document.getElementById('questionTimer');
+            if (timerElement) {
+                const timerInterval = setInterval(function() {
+                    if (timeLeft <= 0) {
+                        clearInterval(timerInterval);
+                        timerElement.textContent = "Time's up!";
+                        timerElement.classList.add('timer-warning');
+                    } else {
+                        const minutes = Math.floor(timeLeft / 60);
+                        const seconds = timeLeft % 60;
+                        timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                        if (timeLeft < 30) {
+                            timerElement.classList.add('timer-warning');
+                        }
+                        timeLeft--;
+                    }
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+</html>
